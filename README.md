@@ -1,6 +1,6 @@
 # Sistema de Tarefas (Django + SQLite)
 
-Projeto pronto para subir no GitHub — CRUD de tarefas com autenticação de usuários.
+CRUD de tarefas com autenticação de usuários.
 
 ## Como rodar (local)
 
