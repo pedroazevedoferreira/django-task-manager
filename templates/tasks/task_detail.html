@@ -1,0 +1,12 @@
+{% extends 'tasks/base.html' %}
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.description|linebreaks }}</p>
+  <p><strong>Status:</strong> {% if object.completed %}Concluída{% else %}Pendente{% endif %}</p>
+  <p class="text-muted">Criada em {{ object.created_at|date:'d/m/Y H:i' }}</p>
+  <a class="btn btn-secondary" href="{% url 'tasks:task-edit' object.pk %}">Editar</a>
+  <a class="btn btn-danger" href="{% url 'tasks:task-delete' object.pk %}">Excluir</a>
+  <a class="btn btn-link" href="{% url 'tasks:task-list' %}">Voltar</a>
+{% endblock %}
